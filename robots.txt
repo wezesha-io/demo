@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wezesha-demo.kilimo.tech/sitemap.xml

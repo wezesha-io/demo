@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="voicenav-assets" content="/voicenav/" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..900&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet" /><link rel="icon" href="/assets/favicon-CsGnYBev.svg" type="image/svg+xml" /><title>Contact us: Soko Bora</title>
+<link rel="canonical" href="https://wezesha-demo.kilimo.tech/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Soko Bora (Wezesha demo)">
+<meta property="og:title" content="Contact us: Soko Bora voice demo">
+<meta property="og:description" content="Fill in a form by voice: “my name is…”, “type … in phone number”, then say “send message”.">
+<meta property="og:url" content="https://wezesha-demo.kilimo.tech/contact.html">
+<meta property="og:image" content="https://wezesha-demo.kilimo.tech/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Contact us: Soko Bora voice demo">
+<meta property="og:locale" content="en_KE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact us: Soko Bora voice demo">
+<meta name="twitter:description" content="Fill in a form by voice: “my name is…”, “type … in phone number”, then say “send message”.">
+<meta name="twitter:image" content="https://wezesha-demo.kilimo.tech/og.png">  <script type="module" crossorigin src="/assets/index-DdF8Iyg4.js"></script>
+  <script type="module" crossorigin src="/assets/common-a1hngvh1.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BotGB2DD.css">
+</head><body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="/index.html" aria-label="Soko Bora home">SOKO BORA</a>
+    <nav class="main" aria-label="Main">
+      <a href="/index.html" >Home</a>
+      <a href="/shop.html" >Shop</a>
+      <a href="/contact.html" aria-current="page">Contact us</a>
+      <a href="/app.html">My business</a>
+      <a href="/captions.html">Captions</a>
+      <a href="https://wezesha-io.kilimo.tech/blog/">Blog</a>
+      <a href="/signin.html">Sign in</a>
+    </nav>
+    <a class="cart-link" href="/shop.html#cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span data-cart-count>Cart</span></a>
+  </div>
+  <div class="strip"><p>Free delivery in Nairobi on orders over KSh 2,000. Order by noon, get it by evening.</p></div>
+</header>
+<main id="main">
+  <h1>Contact us</h1>
+  <p class="lede">Tell us what you need and we'll get back to you today.</p>
+  <div class="contact-grid">
+    <form class="stack" id="contact">
+      <label class="f">Full name<input name="name" autocomplete="name" required /></label>
+      <label class="f">Phone number<input name="phone" type="tel" autocomplete="tel" required /></label>
+      <label class="f">Email<input name="email" type="email" autocomplete="email" /></label>
+      <label class="f">Topic
+        <select name="topic"><option>An order</option><option>Delivery</option><option>Payment</option><option>Selling to us</option><option>Something else</option></select>
+      </label>
+      <label class="f">Message<textarea name="message"></textarea></label>
+      <fieldset>
+        <legend>How should we reply?</legend>
+        <label class="check"><input type="radio" name="reply" value="call" checked /> Phone call</label>
+        <label class="check"><input type="radio" name="reply" value="sms" /> SMS</label>
+        <label class="check"><input type="radio" name="reply" value="email" /> Email</label>
+      </fieldset>
+      <label class="check"><input type="checkbox" name="agree" /> I agree to be contacted</label>
+      <div><button class="btn" type="submit">Send message</button></div>
+      <p id="sent" class="ok" hidden role="status"></p>
+    </form>
+    <section class="visit" aria-labelledby="visit-title">
+      <h2 id="visit-title">Visit the shop</h2>
+      <p>Shop 14, Soko Lane, Nairobi</p>
+      <p>Monday to Saturday, 7am to 8pm. Sunday, 9am to 2pm.</p>
+      <p>Call or WhatsApp 0700 000 000</p>
+    </section>
+  </div>
+</main>
+<footer class="site"><div class="bar"><span>Soko Bora is a demo shop for trying <a href="https://wezesha-io.kilimo.tech/">Wezesha</a> voice control. Nothing here is for sale.</span></div></footer>
+<script>
+document.getElementById('contact').onsubmit = (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const ok = document.getElementById('sent');
+  ok.hidden = false;
+  ok.textContent = 'Thanks ' + (f.get('name') || 'there') + ', we will reply by ' + f.get('reply') + ' about "' + f.get('topic') + '".';
+};
+</script>
+</body></html>
